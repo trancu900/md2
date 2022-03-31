@@ -4,8 +4,11 @@ import java.util.Scanner;
 
 public class BoiSo {
     public static void main(String[] args) {
-        BCNN2S();
-        BCNN3S();
+        String a="sdafhasuf";
+        System.out.println(a.charAt(1));
+//        BCNN2S();
+//        BCNN3S();
+
     }
 
     public static void BCNN3S() {
