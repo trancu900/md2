@@ -1,6 +1,5 @@
 package codegym;
 
-import vn.codegym.shape.*;
 
 public class Main {
     public static void main(String[] args) {
