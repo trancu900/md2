@@ -22,5 +22,4 @@ public enum Role {
         }
         throw new IllegalArgumentException("invalid");
     }
-
 }
