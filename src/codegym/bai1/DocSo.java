@@ -3,7 +3,7 @@ package codegym.bai1;
 public class DocSo {
 
     public static void main(String[] args) {
-        int number = 200;
+        int number = 20;
         int first = number / 100;
         int second = (number % 100) / 10;
         int third = number % 10;
@@ -11,19 +11,20 @@ public class DocSo {
         if (number < 10) {
             result = one2Nine(third);
             System.out.println(result);
-
+            return;
         }
+        System.out.println(number);
         if (number >= 10 && number < 20) {
             result = _10_to_19(third);
             System.out.println(result);
-
+            return;
         }
         if (number > 19 && number < 100) {
             result = _20_to_99(second);
             if (third != 0)
                 result += " " + one2Nine(third);
             System.out.println(result);
-
+            return;
         }
         if (number > 99) {
             result = one2Nine(first) + " hundred";
@@ -31,13 +32,14 @@ public class DocSo {
                 switch (second) {
                     case 1:
                         result += " " + _10_to_19(third);
-                        break;
+                        System.out.println(result);
+                        return;
                     default:
                         result += " " + _20_to_99(second);
                         break;
                 }
             }
-            if(third!=0){
+            if (third != 0) {
                 result += " " + one2Nine(third);
             }
             System.out.println(result);
@@ -116,6 +118,9 @@ public class DocSo {
     public static String one2Nine(int number) {
         String donviStr = null;
         switch (number) {
+            case 0:
+                donviStr = "Zero";
+                break;
             case 1:
                 donviStr = "One";
                 break;
