@@ -1,11 +1,12 @@
 package codegym.oop.shape;
 
-public class Circle {
+public class Circle extends Shape {
     private double radius;
-    private double PI = 3.14;
 
-    public Circle(double radius) {
+
+    public Circle(double radius, String color) {
         this.radius = radius;
+        this.color = color;
     }
 
     public double getRadius() {
@@ -17,6 +18,14 @@ public class Circle {
     }
 
     public double getArea() {
-        return PI * radius * radius;
+        System.out.println("Area Circle");
+        return Math.PI * radius * radius;
     }
+
+//    @Override
+//    public String toString() {
+//        return "Circle{" +
+//                "radius=" + radius + ", color=" + color +
+//                '}';
+//    }
 }

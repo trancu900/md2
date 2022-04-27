@@ -1,5 +1,13 @@
 package codegym.oop.shape;
 
-public abstract class Shape {
-    public abstract double getArea();
+public class Shape {
+    protected String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

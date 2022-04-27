@@ -1,4 +1,5 @@
 package codegym.oop.shape;
+
 import java.util.Objects;
 
 public class Rectangle extends Shape {
@@ -26,21 +27,8 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-    @Override
     public double getArea() {
+        System.out.println("Area Rectangle");
         return width * height;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Rectangle rectangle = (Rectangle) o;
-        return Double.compare(rectangle.width, width) == 0 && Double.compare(rectangle.height, height) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(width, height);
     }
 }

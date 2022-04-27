@@ -1,4 +1,4 @@
-package codegym.oop;
+package codegym.oop.nested.clazz;
 
 public class Customer {
     private int id;
