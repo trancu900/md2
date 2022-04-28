@@ -6,13 +6,16 @@ public class Address {
     String city;
     Location location;
 
+    public Address() {
+
+    }
+
     Address(String line1, String street, String city, Location location) {
         this.line1 = line1;
         this.street = street;
         this.city = city;
         this.location = location;
     }
-
 
 
     @Override
@@ -25,7 +28,7 @@ public class Address {
                 '}';
     }
 
-    static class Location {
+   static class Location {
         double _long;
         double _lat;
 

@@ -21,9 +21,14 @@ public class Customer {
     }
 
     public static void main(String[] args) {
-        Address.Location location = new Address.Location(234.34, 3435.43);
-        Address address = new Address("28", "Nguyen Tri Phuong", "Huế", location);
-        Customer customer = new Customer(1, "Anh Nguyen", address);
+        Address addres = null;
+        Address.Location location = new
+                Address.Location(234.34, 3435.43);
+        Address address =
+                new Address("28", "Nguyen Tri Phuong", "Huế",
+                        location);
+        Customer customer =
+                new Customer(1, "Anh Nguyen", address);
         System.out.println(customer);
     }
 }

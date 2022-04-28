@@ -1,8 +1,7 @@
 package codegym.oop.shape;
 
 public class Circle extends Shape {
-    private double radius;
-
+    protected double radius;
 
     public Circle(double radius, String color) {
         this.radius = radius;
