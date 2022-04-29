@@ -3,7 +3,6 @@ package vn.pt.simple.task.model;
 public class Cart {
     private long id;
     private Long userId;
-    private User user;
     private String fullName;
     private String mobile;
     private String address;
@@ -47,11 +46,4 @@ public class Cart {
         this.address = address;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

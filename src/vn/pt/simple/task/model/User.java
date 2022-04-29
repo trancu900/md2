@@ -8,6 +8,7 @@ public class User {
     private String email;
     private String address;
     private Role role;
+    private String password;
 
     public User(long id, String fullName, String phone, String email) {
         this.id = id;

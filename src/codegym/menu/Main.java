@@ -1,8 +1,7 @@
-package vn.pt.simple.task.views;
+package codegym.menu;
 
 public class Main {
-
     public static void main(String[] args) {
-        UserView.run();
+        MainMenu.launch();
     }
 }
