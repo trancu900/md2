@@ -12,4 +12,5 @@ public class CongAn {
         System.out.println("Dang xac minh ho so");
         System.out.println("Hoan Thanh cap CCCD");
     }
+
 }

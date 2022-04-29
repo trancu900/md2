@@ -1,6 +1,6 @@
 package codegym.interfacee.bo.sung;
 
-public class CongDan implements ICapCanCongDan {
+public class CongDanVietNam implements ICapCanCongDan {
     @Override
     public CMND getCMND() {
         return null;
