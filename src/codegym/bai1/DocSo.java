@@ -3,46 +3,24 @@ package codegym.bai1;
 public class DocSo {
 
     public static void main(String[] args) {
-        int number = 20;
-        int first = number / 100;
-        int second = (number % 100) / 10;
-        int third = number % 10;
+        int number = 6;
+        int first = number / 100;//2
+        int second = (number % 100) / 10;//7
+        int third ;//Tu lam
         String result = null;
+        //if number < 10
         if (number < 10) {
-            result = one2Nine(third);
-            System.out.println(result);
-            return;
+
+          //return;
         }
-        System.out.println(number);
         if (number >= 10 && number < 20) {
-            result = _10_to_19(third);
-            System.out.println(result);
-            return;
+
         }
         if (number > 19 && number < 100) {
-            result = _20_to_99(second);
-            if (third != 0)
-                result += " " + one2Nine(third);
-            System.out.println(result);
-            return;
+
         }
         if (number > 99) {
-            result = one2Nine(first) + " hundred";
-            if (second != 0) {
-                switch (second) {
-                    case 1:
-                        result += " " + _10_to_19(third);
-                        System.out.println(result);
-                        return;
-                    default:
-                        result += " " + _20_to_99(second);
-                        break;
-                }
-            }
-            if (third != 0) {
-                result += " " + one2Nine(third);
-            }
-            System.out.println(result);
+
         }
     }
 

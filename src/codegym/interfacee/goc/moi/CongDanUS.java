@@ -1,8 +1,8 @@
 package codegym.interfacee.goc.moi;
 
-public class CongDanUS implements ICapCanCuocCongDan{
+public class CongDanUS implements ICapCanCuocCongDan {
     public CMND getCMND() {
-        return new CMND();
+        return null;
     }
 
     @Override
@@ -11,7 +11,7 @@ public class CongDanUS implements ICapCanCuocCongDan{
     }
 
     public SoHK getSoHK() {
-        return new SoHK();
+        return null;
     }
 
 }
