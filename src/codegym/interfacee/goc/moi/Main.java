@@ -12,13 +12,12 @@ public class Main {
         CongAn congAn = new CongAn();
         try {
             congAn.capCanCuocCongDan(cdUS);
-        } catch (SoHKException e) {
-            System.out.println("So Hk Nhe");
-            e.printStackTrace();
-        } catch (CMNDException e) {
-            System.out.println("So CMND Meo");
+            return;
+        } catch (CMNDException | SoHKException e) {
+            System.out.println(e.getMessage());
         } finally {
-            System.out.println("Tao la Finaly");
+            System.out.println("Ket thuc roi");
         }
+
     }
 }

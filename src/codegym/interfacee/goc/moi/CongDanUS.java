@@ -11,7 +11,7 @@ public class CongDanUS implements ICapCanCuocCongDan {
     }
 
     public SoHK getSoHK() {
-        return null;
+        return new SoHK();
     }
 
 }

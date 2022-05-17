@@ -1,17 +1,19 @@
 package codegym.bai1;
 
+import java.util.Scanner;
+
 public class DocSo {
 
     public static void main(String[] args) {
         int number = 6;
         int first = number / 100;//2
         int second = (number % 100) / 10;//7
-        int third ;//Tu lam
+        int third;//Tu lam
         String result = null;
         //if number < 10
         if (number < 10) {
 
-          //return;
+            //return;
         }
         if (number >= 10 && number < 20) {
 

@@ -5,5 +5,5 @@ public interface ICapCanCuocCongDan {
 
     CMND getCMND();
 
-    void capCanCongDanHoanThanh(CCCD cccd);
+  void capCanCongDanHoanThanh(CCCD cccd);
 }

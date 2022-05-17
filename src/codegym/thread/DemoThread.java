@@ -1,11 +1,17 @@
 package codegym.thread;
 
+import java.util.Random;
+
 public class DemoThread {
     public static void main(String[] args) {
         CuuChuong cuuChuong = new CuuChuong();
 
-        Thread thread1 = new Thread(new MyRunnable(cuuChuong,9), "Thread1");
-        Thread thread2 = new Thread(new MyRunnable(cuuChuong,5), "Thread1");
+        Thread thread1 = new Thread(
+                new MyRunnable(cuuChuong, 9),
+                "Thread1");
+        Thread thread2 = new Thread(
+                new MyRunnable(cuuChuong, 5),
+                "Thread1");
         thread1.start();
         thread2.start();
     }
@@ -29,11 +35,12 @@ public class DemoThread {
         public synchronized void show(int number) {
             for (int i = 1; i < 10; i++) {
                 try {
-                    Thread.sleep(1000);
+                    Random random = new Random();
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.printf("\n%d * %d=%d", i, number, number * i);
+                System.out.printf("\n%d * %d=%d", number, i, number * i);
             }
         }
     }

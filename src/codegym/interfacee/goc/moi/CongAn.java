@@ -6,7 +6,8 @@ import codegym.exceptions.SoHKException;
 class CongAn {
     void capCanCuocCongDan(ICapCanCuocCongDan capCanCuocCD) throws SoHKException, CMNDException {
         if (capCanCuocCD.getSoHK() == null) {
-            throw new SoHKException("Cần có sổ hổ khẩu");
+            SoHKException soHKException = new SoHKException("Cần có sổ hổ khẩu");
+            throw soHKException;
         }
         if (capCanCuocCD.getCMND() == null) {
             throw new CMNDException("Cần có chứng minh nhân dân");
