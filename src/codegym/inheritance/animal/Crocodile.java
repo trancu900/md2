@@ -1,18 +1,20 @@
 package codegym.inheritance.animal;
 
 public class Crocodile extends Animal {
+    public Crocodile(String name) {
+        super(name);
+    }
+
     @Override
-    //Annotation
     public void eat() {
-        System.out.println("An Thit");
+        System.out.println(getName() + "An Thit");
     }
 
-    @Override
-    public void move() {
-        System.out.println("Chay bon chan");
+    public void run() {
+        System.out.println(getName() + "Chay bon chan");
     }
 
-    public void swim(){
-        System.out.println("Dang boi");
+    public void swim() {
+        System.out.println(getName() + "Dang boi");
     }
 }

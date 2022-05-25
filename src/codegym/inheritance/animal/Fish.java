@@ -1,13 +1,16 @@
 package codegym.inheritance.animal;
 
 public class Fish extends Animal {
-    @Override
-    public void eat() {
-        System.out.println("An thit");
+    public Fish(String name) {
+        super(name);
     }
 
     @Override
-    public void move() {
-        System.out.println("Dang Boi");
+    public void eat() {
+        System.out.println(getName()+"An thit");
+    }
+
+    public void swim() {
+        System.out.println(getName()+"Đang Boi");
     }
 }
