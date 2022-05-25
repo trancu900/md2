@@ -32,6 +32,11 @@ public class Rectangle extends Shape {
     }
 
     @Override
+    public double getArea() {
+        return width * height;
+    }
+
+    @Override
     public String toString() {
         return String.format(
                 "Rectangle{width=%s,height=%s,color=%s}",
