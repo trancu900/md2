@@ -5,7 +5,7 @@ public class CongDanUS implements ICapCanCuocCongDan {
         return null;
     }
 
-    @Override
+   // @Override
     public void capCanCongDanHoanThanh(CCCD cccd) {
         System.out.println("Cong dan US da nhan CCCD");
     }

@@ -1,12 +1,15 @@
 package codegym;
 
-import java.util.*;
+import codegym.inheritance.animal.Crocodile;
+import codegym.inheritance.geometric.Circle;
+import codegym.inheritance.geometric.Cylinder;
+import codegym.inheritance.geometric.Rectangle;
 
 public class Main {
-    static int[] number;
     public static void main(String[] args) {
-
-        System.out.println(number[1]);
+        Cylinder cylinder = new Cylinder(1, 45);
+        System.out.println(cylinder);
+        System.out.println(cylinder.getArea());
 
     }
 }
