@@ -1,6 +1,6 @@
 package codegym.inheritance.animal;
 
-public class Animal {
+public abstract class Animal {
     private String name;
 
     public Animal(String name) {
@@ -15,7 +15,5 @@ public class Animal {
         this.name = name;
     }
 
-    public void eat() {
-        System.out.println("Eating");
-    }
+    public abstract void eat();
 }

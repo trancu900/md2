@@ -37,11 +37,12 @@ public class Rectangle extends Shape {
     }
 
     @Override
+    public double getPerimeter() {
+        return 2 * (width + height);
+    }
+
+    @Override
     public String toString() {
-        return String.format(
-                "Rectangle{width=%s,height=%s,color=%s}",
-                width,
-                height,
-                getColor());
+        return String.format("Rectangle{width=%s,height=%s,color=%s}", width, height, getColor());
     }
 }
