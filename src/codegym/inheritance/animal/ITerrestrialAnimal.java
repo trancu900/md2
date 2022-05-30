@@ -1,5 +1,5 @@
 package codegym.inheritance.animal;
 
-public interface ITerrestrialAnimal {
+public  interface ITerrestrialAnimal {
     public abstract void run();
 }

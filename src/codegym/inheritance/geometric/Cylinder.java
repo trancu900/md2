@@ -11,9 +11,13 @@ public class Cylinder extends Circle {
         return height;
     }
 
+    //Liskov
+    @Override
+    public double getPerimeter() {
+       throw new RuntimeException("Cylinder can't get perimeter");
+    }
+
     public double getVolume() {
         return super.getArea() * this.height;
     }
-
-
 }

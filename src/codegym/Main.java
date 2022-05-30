@@ -13,10 +13,18 @@ public class Main {
         Crocodile crodile = new Crocodile("Cau Sau");
         BirdChich birdChich = new BirdChich("Chich ");
 
-        showSkill(crodile);
-        showSkill(birdChich);
-        showSkill(fish);
-        showSkill(dog);
+        Flyable UFO=new Flyable() {
+            @Override
+            public void fly() {
+                System.out.println("Bay hinh zic zac");
+            }
+        };
+        UFO.fly();
+//
+//        showSkill(crodile);
+//        showSkill(birdChich);
+//        showSkill(fish);
+//        showSkill(dog);
     }
 
     public static void showSkill(Animal animal) {
