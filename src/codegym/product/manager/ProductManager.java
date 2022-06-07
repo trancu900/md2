@@ -9,6 +9,13 @@ public class ProductManager {
     private List<Product> productList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
 
+    public ProductManager() {
+        productList.add(new Product(1, "A", 9807));
+        productList.add(new Product(2, "A", 9807));
+        productList.add(new Product(4, "A", 9807));
+        productList.add(new Product(5, "A", 9807));
+    }
+
     public void addProduct() {
         //System.out.println("nhap id:");
         // int id = Integer.parseInt(scanner.nextLine());
