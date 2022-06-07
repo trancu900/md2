@@ -1,20 +1,31 @@
 package codegym.interfacee.goc.moi;
 
-class CongAn {
-    void capCanCuocCongDan(ICapCanCuocCongDan congdan) {
-        if (congdan.getSoHK() == null) {
-            System.out.println("Cần có sổ hổ khẩu");
+public class CongAn {
+    public void capCanCuocCongDan(ICapCanCuocCongDan iCapCanCuocCongDan) {
+        if (iCapCanCuocCongDan.getCMND() == null) {
+            System.out.println("Cong dan can co CMND");
             return;
         }
-        if (congdan.getCMND() == null) {
-            System.out.println("Cần có chứng minh nhân dân");
+        if (iCapCanCuocCongDan.getSoHK() == null) {
+            System.out.println("Cong dan can co So Ho Khau");
             return;
         }
-        System.out.println("Xác minh giấy tờ liên quan");
-        System.out.println("Cấp căn cước công dân hoàn thành");
-        CCCD cccd = new CCCD();
 
+        System.out.println("Xac minh giay to");
+        System.out.println("Cap CCCD hoan thanh");
     }
-
+//    public void capCanCuocCongDan(CongDanUS congDan) {
+//        if (congDan.getCMND() == null) {
+//            System.out.println("Cong dan can co CMND");
+//            return;
+//        }
+//        if (congDan.getSoHK() == null) {
+//            System.out.println("Cong dan can co So Ho Khau");
+//            return;
+//        }
+//
+//        System.out.println("Xac minh giay to");
+//        System.out.println("Cap CCCD hoan thanh");
+//    }
 
 }

@@ -1,9 +1,9 @@
 package codegym.interfacee.goc.moi;
 
-public class CongDanUS implements ICapCanCuocCongDan{
+public class CongDanChina implements ICapCanCuocCongDan {
 
     public CMND getCMND() {
-        return new CMND();
+        return null;
     }
 
     public SoHK getSoHK() {

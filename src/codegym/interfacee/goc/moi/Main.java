@@ -2,10 +2,12 @@ package codegym.interfacee.goc.moi;
 
 public class Main {
     public static void main(String[] args) {
-
-        CongDanUS cdUS = new CongDanUS();
         CongAn congAn = new CongAn();
-        congAn.capCanCuocCongDan(cdUS);
-
+        CongDanVN congDanVN = new CongDanVN();
+        CongDanUS congDanUS = new CongDanUS();
+        congAn.capCanCuocCongDan(congDanVN);
+        congAn.capCanCuocCongDan(congDanUS);
+        congAn.capCanCuocCongDan(new CongDanChina());
     }
+
 }

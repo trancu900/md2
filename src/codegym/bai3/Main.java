@@ -1,23 +1,33 @@
 package codegym.bai3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String str = "Baoooooooooooo SiOnh".toLowerCase();
-        String input = scanner.nextLine().toLowerCase();
-        if (input.length() != 1) {
-            System.out.println("Tối đa và tối thiểu là 1 kí tự");
-            return;
-        }
-        char ch=input.charAt(0);
-        int count = 0;
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == ch)
-                count += 1;
-        }
-        System.out.printf("Số lần kí tự xuất hiện là %d", count);
-
+        int sResult = sum(1, 5);
+        sResult = sum(3.4, 1);
+        double dResult = sum(3.4, 1.0);
+     //   System.out.println();
+        System.out.println(2);
+        System.out.println(2.0);
     }
+
+    public static int sum(int a, int b) {
+        System.out.println("sum(int a, int b)");
+        return a + b;
+    }
+    public static double sum(double a, double b) {
+        System.out.println("sum(double a, double b)");
+        return a + b;
+    }
+    public static int sum(double a, int b) {
+        System.out.println("sum(double a, int b)");
+        return (int) (a + b);
+    }
+
+    public static int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
 }
