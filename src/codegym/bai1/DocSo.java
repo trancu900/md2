@@ -1,7 +1,5 @@
 package codegym.bai1;
 
-import java.util.Scanner;
-
 public class DocSo {
 
     public static void main(String[] args) {
@@ -95,7 +93,7 @@ public class DocSo {
         return special;
     }
 
-    public static String one2Nine(int number) {
+    public static String zero2Nine(int number) {
         String donviStr = null;
         switch (number) {
             case 0:

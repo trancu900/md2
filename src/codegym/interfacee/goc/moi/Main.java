@@ -8,17 +8,17 @@ public class Main {
         CongAn congAn = new CongAn();
         CongDanVN congDanVN = new CongDanVN();
         CongDanUS congDanUS = new CongDanUS();
-        try {
+     //   try {
             congAn.capCanCuocCongDan(congDanVN);
-        } catch (CMNDException ex) {
-            System.out.println("ve ddi lay cmnd");
-        } catch (SoHoKhauException ex) {
-            System.out.println("ve ddi lay so ho khau");
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        } finally {
-            System.out.println("finally");
-        }
+//        } catch (CMNDException ex) {
+//            System.out.println("ve ddi lay cmnd");
+//        } catch (SoHoKhauException ex) {
+//            System.out.println("ve ddi lay so ho khau");
+//        } catch (Exception ex) {
+//            System.out.println(ex.getMessage());
+//        } finally {
+//            System.out.println("finally");
+//        }
 
 
     }
