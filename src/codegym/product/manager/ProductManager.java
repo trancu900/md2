@@ -11,9 +11,9 @@ public class ProductManager {
 
     public ProductManager() {
         productList.add(new Product(1, "A", 9807));
-        productList.add(new Product(2, "A", 9807));
-        productList.add(new Product(4, "A", 9807));
-        productList.add(new Product(5, "A", 9807));
+        productList.add(new Product(2, "A", 934827));
+        productList.add(new Product(4, "A", 9817));
+        productList.add(new Product(5, "A", 93207));
     }
 
     public void addProduct() {
@@ -33,7 +33,7 @@ public class ProductManager {
     public void showProducts() {
         System.out.printf("%-12s%-12s%-12s\n", "Id", "Ten SP", "Gia");
         for (Product product : productList) {
-            System.out.printf("%-12s%-12s%-12s", product.getId(), product.getName(), product.getPrice());
+            System.out.printf("%-12s%-12s%-12s\n", product.getId(), product.getName(), product.getPrice());
         }
     }
 
@@ -42,13 +42,15 @@ public class ProductManager {
         Comparator<Product> priceASC = new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                return 0;
+                double result = o1.getPrice() - o2.getPrice();
+                return result == 0 ? 0 : (result > 0 ? 1 : -1);
+
             }
         };
         newProductList.sort(priceASC);
         System.out.printf("%-12s%-12s%-12s\n", "Id", "Ten SP", "Gia");
         for (Product product : newProductList) {
-            System.out.printf("%-12s%-12s%-12s", product.getId(), product.getName(), product.getPrice());
+            System.out.printf("%-12s%-12s%-12s\n", product.getId(), product.getName(), product.getPrice());
         }
     }
 
@@ -61,7 +63,8 @@ public class ProductManager {
 
     public static void main(String[] args) {
         ProductManager productManager = new ProductManager();
-        productManager.addProduct();
+        productManager.showProducts();
+        productManager.sortByPriceASC();
         productManager.showProducts();
     }
 }
