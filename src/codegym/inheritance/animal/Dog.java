@@ -1,6 +1,6 @@
 package codegym.inheritance.animal;
 
-public class Dog extends Animal implements Runable {
+public class Dog extends Animal implements Runable,AutoCloseable {
     public Dog(String name) {
         super(name);
     }
@@ -13,5 +13,10 @@ public class Dog extends Animal implements Runable {
     @Override
     public void run() {
         System.out.println(getName() + "Đang Chay");
+    }
+
+    @Override
+    public void close() throws Exception {
+
     }
 }

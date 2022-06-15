@@ -1,50 +1,53 @@
 package codegym;
 
-import codegym.inheritance.animal.*;
+import codegym.inheritance.animal.Animal;
+import codegym.inheritance.animal.Dog;
 import codegym.inheritance.geometric.Circle;
-import codegym.inheritance.geometric.Cylinder;
-import codegym.inheritance.geometric.Rectangle;
-import codegym.inheritance.geometric.Shape;
+
+import java.io.*;
+import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        Dog dog = new Dog("CHO CAI");
-        Fish fish = new Shark("Baby Shark");
-        Crocodile crodile = new Crocodile("Cau Sau");
-        BirdChich birdChich = new BirdChich("Chich ");
-
-        Flyable UFO=new Flyable() {
-            @Override
-            public void fly() {
-                System.out.println("Bay hinh zic zac");
-            }
-        };
-        UFO.fly();
-//
-//        showSkill(crodile);
-//        showSkill(birdChich);
-//        showSkill(fish);
-//        showSkill(dog);
-    }
-
-    public static void showSkill(Animal animal) {
-        animal.eat();
-        if (animal instanceof Flyable)
-            ((Flyable) animal).fly();
-        if (animal instanceof Runable)
-            ((Runable) animal).run();
-        if (animal instanceof Swimmable)
-            ((Swimmable) animal).swim();
-
-    }
-
-    //
-//    public static void showSkill(ITerrestrialAnimal animal) {
-//        animal.run();
+//    public static void main(String[] args) {
+//        long time = System.currentTimeMillis();
+//        try (FileInputStream fis
+//                     = new FileInputStream("source.txt")) {
+//            byte[] buffer = new byte[8];
+//            fis.skip(4);
+//            fis.read(buffer);
+//            System.out.println(new String(buffer));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        System.out.println(System.currentTimeMillis() - time);
 //    }
-//    public static void showSkill(IMarineAnimal animal) {
-//        animal.swim();
-//    }
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+//        try (FileOutputStream fos
+//                     = new FileOutputStream("source.txt")) {
+//            byte[] buffer = {67, 111, 100, 101, 103, 121, 109};
+//            fos.write(buffer);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+
+        ArrayList li=new ArrayList();
+        li.add(new Circle(10));
+        li.add(new Circle(3));
+
+        ObjectOutputStream oos=
+                new ObjectOutputStream(
+                        new FileOutputStream("tes")
+                );
+        oos.writeObject(li);
+        ObjectInputStream ois=
+                new ObjectInputStream(
+                        new FileInputStream("tes"));
+
+        Object obj = ois.readObject();
+
+        System.out.println(obj);
+
+    }
 
 
 }

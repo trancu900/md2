@@ -1,6 +1,8 @@
 package codegym.inheritance.geometric;
 
-public class Circle extends Shape {
+import java.io.Serializable;
+
+public class Circle extends Shape implements Serializable {
     protected double radius;
 
     public Circle(double radius) {
@@ -24,5 +26,12 @@ public class Circle extends Shape {
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "radius=" + radius +
+                '}';
     }
 }
